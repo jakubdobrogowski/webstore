@@ -1,6 +1,7 @@
 package com.jd.webstore.repositories.impl;
 
-import com.jd.webstore.domain.Product;
+import com.jd.webstore.domains.Product;
+import com.jd.webstore.exceptions.ProductNotFoudException;
 import com.jd.webstore.repositories.ProductRepository;
 import org.springframework.stereotype.Repository;
 
@@ -41,6 +42,15 @@ public class InMemoryProductRepository implements ProductRepository {
     public List<Product> getAllProducts() {
 
         return listOfProducts;
+    }
+
+    public Product getProductById(String productId) {
+
+        return listOfProducts.stream()
+                .filter(product -> product.getProductId().equals(productId))
+                .findFirst()
+                .orElseThrow(() -> new ProductNotFoudException("Brak produktu o wskazanym id:" + productId));
+
     }
 }
 

@@ -1,4 +1,4 @@
-package com.jd.webstore.controller;
+package com.jd.webstore.controllers;
 
 import com.jd.webstore.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;

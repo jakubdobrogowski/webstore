@@ -1,4 +1,4 @@
-package com.jd.webstore.domain;
+package com.jd.webstore.domains;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
