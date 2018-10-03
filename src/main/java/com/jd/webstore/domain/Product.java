@@ -23,4 +23,10 @@ public class Product {
     private long unitsInOrder;
     private boolean discontinued;
     private String condition;
+
+    public Product(String productId, String name, BigDecimal unitPrice) {
+        this.productId = productId;
+        this.name = name;
+        this.unitPrice = unitPrice;
+    }
 }
