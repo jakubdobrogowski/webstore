@@ -1,4 +1,4 @@
-package com.jd.webstore.controller;
+package com.jd.webstore.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
